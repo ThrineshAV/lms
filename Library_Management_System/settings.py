@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'library',
+    'library'
     
 ]
 
@@ -77,10 +77,15 @@ WSGI_APPLICATION = 'Library_Management_System.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'library_management_system',   # Replace with your PostgreSQL database name
+        'USER': 'postgres',   # Replace with your PostgreSQL username
+        'PASSWORD': 'test@123',    # Replace with your PostgreSQL password
+        'HOST': 'localhost',            # Or your PostgreSQL host (use '127.0.0.1' if necessary)
+        'PORT': '5432',                 # Default PostgreSQL port
     }
 }
+
 
 
 # Password validation

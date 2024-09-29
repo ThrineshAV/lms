@@ -1,4 +1,5 @@
 from ninja import Schema
+from . import models
 from datetime import date
 
 class AuthorSchema(Schema):
@@ -17,10 +18,17 @@ class MemberSchema(Schema):
     id: int
     name: str
     email: str
+    member_ship:str
+    contact_number:str
+
 
 class LoanSchema(Schema):
     id: int
     book_id: int
     member_id: int
-    borrowed_date: date
+    lended_date: date
     due_date: date
+    return_date: date
+    fine:float
+    status:str
+
